@@ -1,0 +1,315 @@
+﻿<!--The content below is only a placeholder and can be replaced.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+    <title>Ingaia</title>
+  </head>
+
+  <body class="body">
+
+    <div class="cabecalho" name="cabecalhoSite">
+      <img class="imagemLogo"
+        src="https://img.kenlo.io/VWRCUkQ2Tnp3d1BJRDBJVe1szBgxTLVGOsBXp7Jb3Tausvq7IyLq0m1NNXk6UBhFL-hPy3R-Wpsl805m2ZRl4RJ4mNBeU7a-tTKGwojTvIfI8R3RxL7zlvX-8uzYYObm77cD9pbUJWOWl%2Bk8HdB3aEsnauIiGRXmAYzQYHFYqmbQ%2BhjBEuJPSmBc1EQ2lxhXgkO-UtK5.png">
+    </div>
+
+    <div class="menuLateral" name="menu">
+      <div class="divsMenuLateral" name="localidade">
+        <form>
+          <div class="form-group" id="divItens">
+            <label class="labels">Localidades</label>
+            <input type="text" class="form-control inputs" id="inputLocalidade" onkeypress="localidade()" placeholder="Digite condomínio, região, localidade" />
+          </div>
+        </form>
+      </div>
+
+      <div class="divsMenuLateral" name="precoDeVenda">
+        <form>
+          <div class="form-group" id="divItens">
+            <label class="labels">Preço de Venda R$</label>
+            <div class="divInputMinMax">
+              <input type="text" class="form-control" id="inputMin" placeholder="Mínimo" onkeypress="minimo()"/>
+              <input type="text" class="form-control" id="inputMax" placeholder="Máximo" onkeypress="maximo()"/>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="divsMenuLateral" name="tipo">
+        <form>
+          <div class="form-group" id="divItens">
+            <label class="labels">Tipo</label>
+            <select name="tipo" class="form-control inputs" id="inputApartamento">
+              <option selected>Selecione</option>
+              <option>Andar Corporativo</option>
+              <option>Apartamento</option>
+              <option>Apartamento Duplex</option>
+              <option>Apartamento Garden</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <div class="divsMenuLateral" name="opcao">
+        <form>
+          <div class="form-group" id="divItens">
+            <label class="labels">Em condomínio fechado</label>
+            <select name="tipo" class="form-control inputs" id="inputCondominio">
+              <option selected>Indiferente</option>
+              <option>Sim</option>
+              <option>Não</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <div class="divsMenuLateral" name="numeroDeQuartos">
+        <form>
+          <div class="form-group" id="divItens">
+            <label class="labels">Quartos</label>
+            <div class="divButtonsMenu">
+              <button type="button" class="btn btn-outline-danger button1" id="buttonQ1">1+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonQ2">2+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonQ3">3+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonQ4">4+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonQ5">5+</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="divsMenuLateral" name="numeroDeSuites">
+        <form>
+          <div class="form-group" id="divItens">
+            <label class="labels">Suítes</label>
+            <div class="divButtonsMenu">
+              <button type="button" class="btn btn-outline-danger button1" id="buttonS1">1+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonS2">2+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonS3">3+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonS4">4+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonS5">5+</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="divsMenuLateral" name="numeroDeBanheiros">
+        <form>
+          <div class="form-group" id="divItens">
+            <label class="labels">Banheiros</label>
+            <div class="divButtonsMenu">
+              <button type="button" class="btn btn-outline-danger button1" id="buttonB1">1+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonB2">2+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonB3">3+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonB4">4+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonB5">5+</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="divsMenuLateral" name="numeroDeVagas">
+        <form>
+          <div class="form-group" id="divItens">
+            <label class="labels">Vagas</label>
+            <div class="divButtonsMenu">
+              <button type="button" class="btn btn-outline-danger button1" id="buttonV1">1+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonV2">2+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonV3">3+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonV4">4+</button>
+              <button type="button" class="btn btn-outline-danger buttons" id="buttonV5">5+</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="divsMenuLateral" name="area">
+        <form>
+          <div class="form-group" id="divItens">
+            <label class="labels">Área</label>
+            <div class="divArea">
+              <input type="text" class="form-control" id="inputMinArea" placeholder="Mínimo" />
+              <input type="text" class="form-control" id="inputMaxArea" placeholder="Máximo" />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="divsMenuCaracteristica" name="localidade">
+        <form>
+          <div class="form-group" id="divItensCaracteristica">
+            <label class="labels">Características</label>
+            <input type="text" class="form-control inputs" id="inputCaracteristica" placeholder="Busque uma característica" />
+            <div class="form-group form-check divCheckBox1">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Aceita financiamento</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Aceita permuta</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Adega</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Alarme</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Aquecimento solar</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Área de serviço</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Armário closet</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Banheiro de empregada</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Campo de futebol</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Carpete</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Carpete de madeira</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Churrasqueira</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Contrapiso</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Copa</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Despensa</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Dormitório da empregada</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Elevador</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Hidromassagem</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Lareira</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Lavabo</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Lavanderia</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Mezanino</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Minha casa, minha vida</label>
+            </div>
+            <div class="form-group form-check divCheckBox">
+              <input type="checkbox" class="form-check-input checkBox">
+              <label class="form-check-label labelCheck">Mobiliado</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="conteudo" name="conteudoPage">
+
+      <div class="container">
+		<div class="text-center mt-5" id="loading">
+		  <div class="spinner-border" role="status">
+			<span class="sr-only">Loading...</span>
+		  </div>
+		</div>
+        <div class="row" id="container">
+			<!-- conteúdo gerado pelo JS -->
+			<div class="col-12 d-none" id="coluna">
+				<div class="paginacao" name="paginacaoSite">
+					<nav aria-label="Navegação de página exemplo">
+						<ul class="pagination">
+							<li class="page-item"> <a class="page-link" href="#"> Anterior </a> </li>
+							<li class="page-item"> <a class="page-link" href="#"> 1 </a> </li>
+							<li class="page-item"> <a class="page-link" href="#"> 2 </a> </li>
+							<li class="page-item"> <a class="page-link" href="#"> 3 </a> </li>
+							<li class="page-item"> <a class="page-link" href="#"> Próximo </a> </li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+      <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="TituloModalCentralizado">Tenho interesse nesse imóvel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="fechar">
+                <span aria-hidden="true"> &times; </span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="imagemModal">
+                <img id="imagemFormulario" src="https://123i.uol.com.br/noticias/wp-content/uploads/2016/08/apartamentos-luxo-1000x445.jpg" width="150px" height="100px">
+                <div class="divInfoModal">
+                  <div class="labelBairroTipo" id="bairroTipoFormulario"><label style="font-weight: bold">&nbsp; Bairro e tipo de imóvel</label></div>
+                  <div class="labelSigla" id=""><label >&nbsp; €: &nbsp;</label> <label class="labelValor" id="valorFormulario"> 100.000,00</label></div>
+                  <div class="labelReferencia"><label style="color: rgb(148, 148, 148)" id="referenciaFormulario">&nbsp; Brug170485 </label></div>
+                </div>
+              </div>
+              <div class="dadosFormulario">
+                <form  method="POST">
+                  <input class="form-control inputForm" type="text" placeholder="Nome completo" required>
+                  <input class="form-control inputForm" type="email" placeholder="E-mail" required email>
+                  <input class="form-control inputForm" type="tel" placeholder="Telefone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" maxlength=15 minlength=11>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block buttonForm" > Entrar em contato </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+
+<html>

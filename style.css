@@ -1,0 +1,287 @@
+.cabecalho{
+  display: flex;
+  position: relative;
+  margin-left: 0px;
+  margin-top: 0px;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  background-color: white;
+}
+
+.imagemLogo{
+  width: 200px;
+  height: 30px;
+}
+
+.body{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(218, 213, 213);
+}
+
+.menuLateral{
+  position: relative;
+  float: left;
+  display: block;
+  margin-left: 0px;
+  margin-top: 0px;
+  width: 19%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid rgb(218, 213, 213);
+}
+
+.conteudo{
+  position: relative;
+  float: left;
+  display: flex;
+  margin-left: 0px;
+  margin-top: 0px;
+  width: 81%;
+  height: 100%;
+  background-color: rgb(218, 213, 213);
+}
+
+.container{
+  display: inline-block;
+  width: 100%;
+}
+
+#coluna{
+  margin-top: 15px;
+}
+
+
+.card-body{
+  display: block;
+  text-align: center;
+}
+
+.divButtonCod{
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.codigoImovel{
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 25%;
+  color: rgb(126, 125, 125);
+}
+
+#botaoContato{
+  position: relative;
+  background-color: rgb(22, 22, 151);
+  color: white;
+}
+
+.imagemSlide{
+  width: 100%;
+  height: 250px;
+}
+
+#imagemSlide{
+  width: 100%;
+  height: 250px;
+}
+
+.card-img-top{
+  width: 100%;
+  height: 250px;
+}
+
+.card-title{
+  margin-top: -15px;
+}
+
+.card-text{
+  width: 100%; 
+  height: 170px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+}
+
+.divsMenuLateral{
+  height: 110px;
+  border-bottom: 1px solid rgb(207, 201, 201);
+}
+
+
+#divItens{
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.labels{
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.inputs{
+  margin-left: 20px;
+  width: 85%;
+}
+
+.divInputMinMax{
+  width: 100%;
+  display: flex;
+  float: left;
+}
+
+#inputMin{
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#inputMax{
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#inputMinArea{
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#inputMaxArea{
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divButtonsMenu{
+  width: 100%;
+  display: flex;
+  float: left;
+}
+
+.button1{
+  display: flex;
+  margin-left: 20px;
+  width: 15%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(248, 95, 7, 0.959);
+}
+
+.buttons{
+  display: flex;
+  margin-left: 5px;
+  width: 15%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(248, 95, 7, 0.959);
+}
+
+.divArea{
+  width: 100%;
+  display: flex;
+  float: left;
+}
+
+#divItensCaracteristica{
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.divsMenuCaracteristica{
+  height: 100%;
+}
+
+.divCheckBox1{
+  margin-top: 7px;
+  margin-left: 20px;
+  display: block;
+}
+
+.divCheckBox{
+  margin-left: 20px;
+  margin-top: -15px;
+  display: block;
+}
+
+.checkBox{
+  margin-top: 7px;
+}
+
+.modal-body{
+  display: block;
+}
+
+.imagemModal{
+  display: flex;
+  float: left;
+  width: 100%;
+  height: 100px;
+}
+
+.divInfoModal{
+  display: inline;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+}
+
+.labelBairroTipo{
+  display: inline;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.labelSigla{
+  width: 100%;
+}
+
+.labelReferencia{
+  width: 100%;
+}
+
+.dadosFormulario{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.inputForm{
+  display: inline-flex;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.buttonForm{
+  margin-top: 10px;
+  background-color: rgb(22, 22, 151);
+}
+
+.paginacao{
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.button1:hover{
+  background-color: rgba(248, 95, 7, 0.959);
+}
+
+.buttons:hover{
+  background-color: rgba(248, 95, 7, 0.959);
+}
+
+.buttonForm:hover{
+  background-color: rgba(248, 95, 7, 0.959);
+}
+
+
